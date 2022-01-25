@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Mine Sweeper</title>
+  <style>
+	body{
+		font-family: monospace;
+		font-size: 20px;
+	}
+    #game, #win, #lose, #resart{
+      width: fit-content;
+      text-align: center;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    #board td{
+      width: 25px;
+      height: 25px;
+      border: 1px solid silver;
+      text-align: center;
+      background-size: 100%;
+      font-size: 20px;
+      font-family: monospace;
+    }
+    #board{
+      border-collapse: collapse;
+      z-index: 0;
+    }
+    #death{
+      display: none;
+      position: absolute;
+      width: fit-content;
+      margin: 0 auto;
+      top: 30%;
+      left: 45%;
+      font-family: monospace;
+      font-size: 40px;
+      z-index: 1;
+	}
+	#clock{
+		font-size: 25px;
+	}
+    #scoresDiv{
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      float: left;
+      margin-left:5%;
+    }
+    #scoresDiv h2{
+      margin-bottom: 10px;
+    }
+    #scores{
+      width: 100%;
+      border-collapse: collapse;
+    }
+	#scores tr{
+		padding-left: 10px;
+		border-left: 3px solid #ccc;
+	}
+    #scores tr:first-child td{
+      border-top: none;
+    }
+    #scores tr:last-child td{
+      border-bottom: none;
+    }
+    #scores tr td:last-child{
+      border-right: none;
+    }
+    #scores tr:nth-child(even){
+      background-color: #f2f2f2;
+    }
+    #scores tr:hover{
+      background-color: #ddd;
+    }
+    #scores td{
+      border: 1px solid #ddd;
+      padding: 5px 15px;
+    }
+    #win, #lose, #restart{
+        display: none;
+    }
+	#restart{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	</style>
+</head>
+<body>
+  <a href='https://24.15.212.108/games.html'<button>Go Home</button></a>
+	<div id="scoresDiv">
+		<h2>High Scores</h2>
+		<table id="scores">
+		</table>
+	</div>
+	<div id="game">
+		<div id='clock'>00:00</div>
+		<table id='board'>
+		</table>
+	</div>
+	<div id="win">
+		<form id="winForm">
+			<span id="time"></span><br>
+			<input id="name" type="text" placeholder="Initials" maxlength="3" required><br>
+			<input id="submit" type="submit">
+		</form>
+	</div>
+	<div id="lose">You died</div>
+	<button id="restart">Restart</button>
+	<script src="main.js"></script>
+</body>
+</html>
