@@ -2,13 +2,11 @@ Mark-o.org
 
 Creator: Charlie 
 
-Helper: Dave
-
 Marco: Marco
 
 The Devil: Charlie’s Dog
 
-Fuck you: John
+F*ck you: John, Dave
 
 Short: Henry and John
 
